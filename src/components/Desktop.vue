@@ -153,30 +153,90 @@ const openPDF = () => {
 const openAboutMe = () => {
   const aboutMeContent = {
     type: "text",
-    text: `Welcome to my portfolio!
+    text: `╔════════════════════════════════════════════════════════════╗
+║                    ABOUT ME - LAM ANH THINH                ║
+╚════════════════════════════════════════════════════════════╝
 
-My name is [Your Name]
+PERSONAL INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Name:     Lam Anh Thinh
+Role:     Junior Penetration Tester | Security Researcher
+Email:    thinhlam06@outlook.com
+GitHub:   github.com/LAT-06
+LinkedIn: linkedin.com/in/lat06
 
-About Me:
-I am a passionate developer with expertise in web development, 
-cybersecurity, and creating innovative solutions. 
+PROFESSIONAL SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Aspiring cybersecurity professional with hands-on experience in 
+penetration testing and vulnerability assessment. Passionate about 
+identifying security flaws and developing solutions to protect 
+digital assets. Currently focused on expanding knowledge in web 
+application security, network security, and ethical hacking.
 
-Skills:
-• Web Development (Vue.js, React, Node.js)
-• Cybersecurity & Penetration Testing
-• System Administration
-• Problem Solving & Critical Thinking
+CORE COMPETENCIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Security Testing:
+  • Web Application Penetration Testing
+  • Vulnerability Assessment & Analysis
+  • Security Auditing & Compliance
+  • OWASP Top 10 Vulnerabilities
 
-Experience:
-I love building creative projects and exploring new technologies.
-This Windows XP portfolio is one of my creative experiments!
+Technical Skills:
+  • Programming: Python, JavaScript, Bash Scripting
+  • Security Tools: Burp Suite, Metasploit, Nmap, Wireshark
+  • Web Technologies: HTML, CSS, Vue.js, Node.js
+  • Operating Systems: Linux (Kali, Ubuntu), Windows
+  • Frameworks: OWASP, MITRE ATT&CK
 
-Feel free to explore my projects and get in touch!
+Professional Skills:
+  • Analytical Thinking & Problem Solving
+  • Technical Report Writing
+  • Security Documentation
+  • Continuous Learning & Adaptation
 
-Contact: thinhlam06@outlook.com`,
+CERTIFICATIONS & ACHIEVEMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Active TryHackMe Member - Practicing penetration testing
+• Security Research & Bug Bounty Programs Participant
+• CTF Competition Participant
+• Self-taught Ethical Hacker
+
+INTERESTS & GOALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Focus:
+  → Advanced web application security testing
+  → Mobile application penetration testing
+  → API security assessment
+  → Red team operations
+
+Career Goals:
+  → Obtain professional security certifications (CEH, OSCP)
+  → Contribute to open-source security projects
+  → Build expertise in cloud security
+  → Become a recognized security researcher
+
+CONTINUOUS LEARNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Regular practice on TryHackMe and HackTheBox platforms
+• Following latest security trends and CVE disclosures
+• Participating in bug bounty programs
+• Reading security blogs and research papers
+• Contributing to cybersecurity community
+
+WHY CYBERSECURITY?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"Security is not a product, but a process. I'm passionate about 
+protecting digital assets and helping organizations strengthen their 
+security posture through thorough testing and continuous improvement."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Let's connect and collaborate on security projects!
+GitHub: github.com/LAT-06
+Email: thinhlam06@outlook.com
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
   };
 
-  createWindow("About Me.txt", aboutMeContent, 600, 450);
+  createWindow("About Me.txt", aboutMeContent, 650, 500);
 };
 
 const createWindow = (title, content, width = 500, height = 400) => {
