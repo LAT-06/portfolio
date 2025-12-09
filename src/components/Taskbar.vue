@@ -88,7 +88,7 @@ const currentYear = ref(new Date().getFullYear());
 const today = new Date().getDate();
 
 const startIconUrl = computed(() => {
-  return import.meta.env.BASE_URL + 'start.png';
+  return import.meta.env.BASE_URL + "start.png";
 });
 
 const monthNames = [

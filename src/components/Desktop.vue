@@ -53,13 +53,13 @@ import StartMenu from "./StartMenu.vue";
 import Window from "./Window.vue";
 
 const getAssetUrl = (path) => {
-  return import.meta.env.BASE_URL + path.replace(/^\//, '');
+  return import.meta.env.BASE_URL + path.replace(/^\//, "");
 };
 
 const desktopStyle = computed(() => ({
-  backgroundImage: `url('${getAssetUrl('background.jpg')}')`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center'
+  backgroundImage: `url('${getAssetUrl("background.jpg")}')`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
 }));
 
 const selectedIcon = ref(null);
@@ -127,7 +127,7 @@ const openMyComputer = () => {
         id: "medium",
         label: "Medium",
         icon: '<img src="/medium.png" style="width: 48px; height: 48px; object-fit: contain;" />',
-        url: "https://medium.com/@nagatodeptrai", 
+        url: "https://medium.com/@nagatodeptrai",
       },
       {
         id: "linkedin",
@@ -144,7 +144,7 @@ const openMyComputer = () => {
 const openPDF = () => {
   const pdfContent = {
     type: "pdf",
-    url: getAssetUrl("cv.pdf"),
+    url: getAssetUrl("main.pdf"),
   };
 
   createWindow("My_CV.pdf", pdfContent, 800, 600);

@@ -37,38 +37,48 @@ import { computed } from "vue";
 const emit = defineEmits(["close", "action"]);
 
 const getAssetUrl = (path) => {
-  return import.meta.env.BASE_URL + path.replace(/^\//, '');
+  return import.meta.env.BASE_URL + path.replace(/^\//, "");
 };
 
 const menuItems = [
   {
     id: "github",
     label: "GitHub Profile",
-    icon: `<img src="${getAssetUrl('github.png')}" style="width: 24px; height: 24px; object-fit: contain;" />`,
+    icon: `<img src="${getAssetUrl(
+      "github.png"
+    )}" style="width: 24px; height: 24px; object-fit: contain;" />`,
     url: "https://github.com/LAT-06/",
   },
   {
     id: "tryhackme",
     label: "TryHackMe",
-    icon: `<img src="${getAssetUrl('thm.png')}" style="width: 24px; height: 24px; object-fit: contain;" />`,
+    icon: `<img src="${getAssetUrl(
+      "thm.png"
+    )}" style="width: 24px; height: 24px; object-fit: contain;" />`,
     url: "https://tryhackme.com/p/LAT",
   },
   {
     id: "medium",
     label: "Medium Blog",
-    icon: `<img src="${getAssetUrl('medium.png')}" style="width: 24px; height: 24px; object-fit: contain;" />`,
+    icon: `<img src="${getAssetUrl(
+      "medium.png"
+    )}" style="width: 24px; height: 24px; object-fit: contain;" />`,
     url: "https://medium.com/@nagatodeptrai",
   },
   {
     id: "linkedin",
     label: "LinkedIn",
-    icon: `<img src="${getAssetUrl('linkedin.png')}" style="width: 24px; height: 24px; object-fit: contain;" />`,
+    icon: `<img src="${getAssetUrl(
+      "linkedin.png"
+    )}" style="width: 24px; height: 24px; object-fit: contain;" />`,
     url: "https://www.linkedin.com/in/lat06/",
   },
   {
     id: "my-computer",
     label: "My Computer",
-    icon: `<img src="${getAssetUrl('mycomputer.png')}" style="width: 24px; height: 24px; object-fit: contain;" />`,
+    icon: `<img src="${getAssetUrl(
+      "mycomputer.png"
+    )}" style="width: 24px; height: 24px; object-fit: contain;" />`,
     action: "my-computer",
   },
 ];
