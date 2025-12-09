@@ -68,7 +68,10 @@
           class="explorer-item"
           @dblclick="openExplorerItem(item)"
         >
-          <div class="explorer-item-icon" v-html="item.icon"></div>
+          <div class="explorer-item-icon">
+            <img v-if="item.iconSrc" :src="item.iconSrc" :alt="item.label" />
+            <span v-else v-html="item.icon"></span>
+          </div>
           <div class="explorer-item-label">{{ item.label }}</div>
         </div>
       </div>
