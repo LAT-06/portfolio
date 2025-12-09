@@ -2,7 +2,7 @@
   <div class="taskbar">
     <!-- Start Button -->
     <div class="start-button" @click.stop="$emit('toggle-start-menu')">
-      <img src="/start.png" alt="Start" class="start-icon" />
+      <img :src="startIconUrl" alt="Start" class="start-icon" />
       <span>start</span>
     </div>
 
@@ -86,6 +86,10 @@ const showCalendar = ref(false);
 const currentMonth = ref(new Date().getMonth());
 const currentYear = ref(new Date().getFullYear());
 const today = new Date().getDate();
+
+const startIconUrl = computed(() => {
+  return import.meta.env.BASE_URL + 'start.png';
+});
 
 const monthNames = [
   "January",

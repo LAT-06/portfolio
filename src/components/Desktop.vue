@@ -1,5 +1,5 @@
 <template>
-  <div class="desktop" @click="handleDesktopClick">
+  <div class="desktop" @click="handleDesktopClick" :style="desktopStyle">
     <!-- Desktop Icons -->
     <div class="desktop-icons">
       <div
@@ -47,10 +47,20 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import Taskbar from "./Taskbar.vue";
 import StartMenu from "./StartMenu.vue";
 import Window from "./Window.vue";
+
+const getAssetUrl = (path) => {
+  return import.meta.env.BASE_URL + path.replace(/^\//, '');
+};
+
+const desktopStyle = computed(() => ({
+  backgroundImage: `url('${getAssetUrl('background.jpg')}')`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center'
+}));
 
 const selectedIcon = ref(null);
 const showStartMenu = ref(false);
@@ -61,19 +71,19 @@ const desktopIcons = [
   {
     id: "my-computer",
     label: "My Computer",
-    iconSrc: "/mycomputer.png",
+    iconSrc: getAssetUrl("mycomputer.png"),
     type: "explorer",
   },
   {
     id: "recycle-bin",
     label: "Recycle Bin",
-    iconSrc: "/recycle.png",
+    iconSrc: getAssetUrl("recycle.png"),
     type: "folder",
   },
   {
     id: "my-cv",
     label: "My_CV.pdf",
-    iconSrc: "/pdf.png",
+    iconSrc: getAssetUrl("pdf.png"),
     type: "pdf",
   },
 ];
@@ -134,7 +144,7 @@ const openMyComputer = () => {
 const openPDF = () => {
   const pdfContent = {
     type: "pdf",
-    url: "/main.pdf",
+    url: getAssetUrl("cv.pdf"),
   };
 
   createWindow("My_CV.pdf", pdfContent, 800, 600);
