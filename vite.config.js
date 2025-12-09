@@ -5,12 +5,11 @@ import vue from "@vitejs/plugin-vue";
 export default defineConfig(({ command }) => {
   const config = {
     plugins: [vue()],
-    base: command === "serve" ? "/" : "/l@t/",
+    base: command === "serve" ? "/" : "/portfolio/", // <-- ĐÃ SỬA
     build: {
       outDir: "dist",
       assetsDir: "assets",
     },
   };
-
   return config;
 });
